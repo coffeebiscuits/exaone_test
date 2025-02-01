@@ -4,6 +4,7 @@ from llama_cpp import Llama
 llm = Llama.from_pretrained(
     repo_id="LGAI-EXAONE/EXAONE-3.5-2.4B-Instruct-GGUF",
     filename="EXAONE-3.5-2.4B-Instruct-BF16.gguf",
+    verbose=False
 )
 
 # 대화 루프

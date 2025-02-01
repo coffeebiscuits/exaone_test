@@ -1,4 +1,6 @@
 from llama_cpp import Llama
+from datetime import datetime
+import pytz
 
 # Llama 모델 로드
 llm = Llama.from_pretrained(
@@ -6,6 +8,10 @@ llm = Llama.from_pretrained(
     filename="EXAONE-3.5-2.4B-Instruct-BF16.gguf",
     verbose=False
 )
+
+# 현재 시간
+timezone = pytz.timezone('Asia/Seoul')
+current_datetime = datetime.now(timezone).strftime('%Y.%m.%d.%A - %H:%M:%S')
 
 # 대화 루프
 print("LLM과 대화를 시작합니다. '종료'라고 입력하면 대화가 종료됩니다.")
@@ -16,7 +22,9 @@ while True:
     if user_input.strip().lower() == "종료":
         print("대화를 종료합니다.")
         break
-
+        
+    current_datetime = datetime.now(timezone).strftime('%Y.%m.%d.%A - %H:%M:%S')  
+    
     # 사용자 메시지 추가
     messages.append({"role": "user", "content": user_input})
 

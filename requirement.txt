@@ -1,3 +1,4 @@
 streamlit
-$env:CMAKE_ARGS = "-DGGML_BLAS=ON -DGGML_BLAS_VENDOR=OpenBLAS"
-llama-cpp-python
+git clone https://github.com/ggml-org/llama.cpp
+cd llama.cpp
+make

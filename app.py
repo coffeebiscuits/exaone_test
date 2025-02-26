@@ -1,4 +1,4 @@
-from llama_cpp import Llama
+import llama_cpp
 from datetime import datetime
 import pytz
 

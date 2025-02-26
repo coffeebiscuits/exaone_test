@@ -5,7 +5,7 @@ import pytz
 # Llama 모델 로드
 llm = Llama.from_pretrained(
     repo_id="LGAI-EXAONE/EXAONE-3.5-2.4B-Instruct-GGUF",
-    filename="EXAONE-3.5-2.4B-Instruct-BF16.gguf",
+    filename="EXAONE-3.5-2.4B-Instruct-Q4_K_M.gguf",
     verbose=False
 )
 
